@@ -1,0 +1,44 @@
+<div class="authentication-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-5 offset-md-3 col-xs-12">
+        <h1 class="text-center">Kayıt Ol</h1>
+        <p class="text-center">
+          <a [routerLink]="['/login']">Hesabın var mı?</a>
+        </p>
+        <!-- errors will come here. -->
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <fieldset>
+            <fieldset class="form-group">
+              <input
+                formControlName="userName"
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="Kullanıcı adı"
+              />
+            </fieldset>
+            <fieldset class="form-group">
+              <input
+                formControlName="eMail"
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="e-Mail"
+              />
+            </fieldset>
+            <fieldset class="form-group">
+              <input
+                formControlName="password"
+                type="password"
+                class="form-control form-control-lg"
+                placeholder="Şifre"
+              />
+            </fieldset>
+            <button class="btn btn-lg btn-success pull-xs-right" type="submit">
+              Kayıt Ol
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
